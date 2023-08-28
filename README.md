@@ -2,14 +2,24 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+This template uses yarn.
+
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
+```
+
+Then, install the dependencies:
+
+```bash
+yarn install
+```
+
+This template uses ESLint as the linter and Prettier as the formatter. Husky is used to lint and format on every commit. You need to install it with this command:
+
+```bash
+husky install
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
