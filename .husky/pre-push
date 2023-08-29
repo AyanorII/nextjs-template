@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-pre-push
+eslint --fix . && prettier --write '**/*.{js,ts,tsx}' '*.{js,ts,tsx}' && yarn build
