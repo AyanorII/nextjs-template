@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-This template uses yarn.
+Next.js 13 template using the App router, ESLint, Prettier, Husky and react-hook-form with Zod. This template also includes dependabot to maintain the dependencies up-to-date.
 
 First, run the development server:
 
