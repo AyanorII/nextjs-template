@@ -14,6 +14,5 @@
 	"tabWidth": 2,
 	"trailingComma": "es5",
 	"useTabs": true,
-	"parser": "typescript",
-  "organizeImportsSkipDestructiveCodeActions": true
+	"parser": "typescript"
 }
