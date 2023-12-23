@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "yarn lint && next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint . --max-warnings=0",
     "prepare": "husky install"
   },
   "husky": {
@@ -17,8 +17,8 @@
   },
   "lint-staged": {
     "**/*.{js,ts,tsx}": [
-      "eslint --fix --max-warnings=0",
-      "prettier --write"
+      "prettier --write",
+      "eslint --fix --max-warnings=0"
     ]
   },
   "dependencies": {
