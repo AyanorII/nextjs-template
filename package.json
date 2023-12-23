@@ -12,7 +12,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "eslint --fix . && prettier --write '**/*.{js,ts,tsx}' '*.{js,ts,tsx}' && yarn build"
+      "pre-push": "eslint --fix --max-warnings=0 . && prettier --write '**/*.{js,ts,tsx}' '*.{js,ts,tsx}' && yarn build"
     }
   },
   "lint-staged": {
