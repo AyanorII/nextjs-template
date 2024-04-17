@@ -4,21 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn lint && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint . --max-warnings=0",
+    "format": "prettier --write '**/*.{js,ts,tsx}'",
     "prepare": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "eslint --fix --max-warnings=0 . && prettier --write '**/*.{js,ts,tsx}' '*.{js,ts,tsx}' && yarn build"
-    }
   },
   "lint-staged": {
     "**/*.{js,ts,tsx}": [
-      "prettier --write",
-      "eslint --fix --max-warnings=0"
+      "yarn format",
+      "git add .",
+      "yarn lint"
     ]
   },
   "dependencies": {
