@@ -3,7 +3,10 @@ import { Inter } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import { ThemeProvider } from "@/components/theme-provider";
+
 import { cn } from "@/lib/utils";
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,19 +24,25 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={cn("min-h-screen- bg-background", inter.className)}>
-				{children}
-				<ToastContainer
-					position="bottom-right"
-					autoClose={2500}
-					hideProgressBar={false}
-					newestOnTop={false}
-					closeOnClick
-					rtl={false}
-					pauseOnFocusLoss
-					draggable
-					pauseOnHover
-					theme="colored"
-				/>
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableColorScheme
+				>
+					{children}
+					<ToastContainer
+						position="bottom-right"
+						autoClose={2500}
+						hideProgressBar={false}
+						newestOnTop={false}
+						closeOnClick
+						rtl={false}
+						pauseOnFocusLoss
+						draggable
+						pauseOnHover
+						theme="colored"
+					/>
+				</ThemeProvider>
 			</body>
 		</html>
 	);
